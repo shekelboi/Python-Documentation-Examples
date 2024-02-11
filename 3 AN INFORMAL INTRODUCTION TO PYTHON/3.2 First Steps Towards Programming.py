@@ -28,4 +28,6 @@ while len(divisors) <= number_of_divisors:
 print()
 
 # Print the list of the first 6 divisors found
-print(divisors)
+# We can pass multiple arguments to print, even of different types
+# (a space will be automatically added in between the displayed arguments)
+print("Here are the divisors found:", divisors)
