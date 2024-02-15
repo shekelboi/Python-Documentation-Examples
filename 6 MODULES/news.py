@@ -3,6 +3,9 @@ A small Python module for retrieving the latest news.
 """
 import http.client
 import xml.etree.ElementTree
+from datetime import datetime
+
+current_date = datetime.now()
 
 
 def get_news_from_cnn() -> list[str]:
@@ -25,3 +28,6 @@ print("Python module 'news' loaded!")
 # Print the news if the module is executed directly
 if __name__ == "__main__":
     print("\n".join(get_news_from_cnn()))
+
+# Only the get_news_from_cnn function will be exported when imported by the *
+__all__ = ["get_news_from_cnn"]
